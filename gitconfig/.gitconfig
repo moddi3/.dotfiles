@@ -1,0 +1,7 @@
+[user]
+	email = v.ivanov@sendpulse.com
+	name = Vlad Ivanov
+[pull]
+	rebase = false
+[url "https://"]
+	insteadOf = git://
