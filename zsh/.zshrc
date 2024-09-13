@@ -72,7 +72,9 @@ export UPDATE_ZSH_DAYS=1
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-auto-nvm-use autoupdate)
+
+
+plugins=(git pj)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,13 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 export LC_ALL="en_US.UTF-8"
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 export PATH="/Users/moddi3/bin:$PATH"
 
 
@@ -122,15 +118,12 @@ alias p="pnpm"
 alias python="python3"
 # pnpm end
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-# bun completions
-[ -s "/Users/moddi3/.bun/_bun" ] && source "/Users/moddi3/.bun/_bun"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# opam configuration
-[[ ! -r /Users/moddi3/.opam/opam-init/init.zsh ]] || source /Users/moddi3/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+. /usr/local/opt/asdf/libexec/asdf.sh
+. ~/.asdf/plugins/golang/set-env.zsh
+
+export GPG_TTY=$(tty)
+export HOMEBREW_NO_AUTO_UPDATE=1
