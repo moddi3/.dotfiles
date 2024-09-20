@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -74,7 +72,7 @@ export UPDATE_ZSH_DAYS=1
 # Add wisely, as too many plugins slow down shell startup.
 
 
-plugins=(git pj)
+plugins=(git pj asdf yarn npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,14 +105,11 @@ source $ZSH/oh-my-zsh.sh
 export LC_ALL="en_US.UTF-8"
 export PATH="/Users/moddi3/bin:$PATH"
 
-
-# Load Angular CLI autocompletion.
-# source <(ng completion script)
+PROJECT_PATHS=(~/work)
 
 # pnpm
 export PNPM_HOME="/Users/moddi3/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-alias p="pnpm"
 alias python="python3"
 # pnpm end
 
@@ -127,3 +122,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 export GPG_TTY=$(tty)
 export HOMEBREW_NO_AUTO_UPDATE=1
+
